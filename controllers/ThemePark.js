@@ -1,33 +1,30 @@
-const {Post} = require("../models/themePark")
-
-const GetPosts = async (req, res) => {
+const themePark = require('../models/themePark')
+const GetThemePark = async (req, res) => {
   try {
-    const posts = await Post.find({})
-    res.status(200).send(posts)
+    const themePark = await themePark.find({})
+    res.status(200).send(themePark)
   } catch (error) {
     throw error
   }
 }
-
-const CreatePost = async (req, res) => {
+const CreateThemePark = async (req, res) => {
   try {
-    const post = await Post.create(req.body)
-    res.status(200).send(post)
+    const themePark = await themePark.create(req.body)
+    res.status(200).send(themePark)
   } catch (error) {
     throw error
   }
 }
-
-const DeletePost = async (req, res) => {
+const DeleteThemePark = async (req, res) => {
   try {
-    await Post.deleteOne({ _id: req.params.id })
-    res.status(200).send({ msg: 'Post Deleted', id: req.params.id })
+    await themePark.deleteOne({ _id: req.params.id })
+    res.status(200).send({ msg: 'ThemePark Deleted', id: req.params.id })
   } catch (error) {
     throw error
   }
 }
 module.exports = {
-  GetPosts,
-  CreatePost,
-  DeletePost,
+  GetThemePark,
+  CreateThemePark,
+  DeleteThemePark,
 }

@@ -1,14 +1,14 @@
 const router = require('express').Router()
 const controller = require('../controllers/ThemePark')
 
-router.get('/', controller.GetPosts)
+router.get('/', controller.GetThemePark)
 router.post(
   '/',
-  controller.CreatePost
+  controller.CreateThemePark
 )
 
 router.delete(
   '/:id',
-  controller.DeletePost
+  controller.DeleteThemePark
 )
 module.exports = router
