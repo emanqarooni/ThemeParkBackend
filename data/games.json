@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Dragon Coaster",
+    "description": "A high-speed roller coaster with loops and drops.",
+    "thrillLevel": "Extreme",
+    "image": "https://modernmidways.com/media/imagepack/rides/58944669-F71B-444E-AA07-4A21C8CE1CF6-LEAD.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Pirate Ship",
+    "description": "Classic swinging ship that soars through the air.",
+    "thrillLevel": "Moderate",
+    "image": "https://www.fabbrigroup.com/wp-content/uploads/2021/12/corsair-ride-fabbri-PirateShip-13.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Haunted Mansion",
+    "description": "Spooky dark ride filled with ghosts and illusions.",
+    "thrillLevel": "Low",
+    "image": "https://i.ytimg.com/vi/sxo5QQrswyk/maxresdefault.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Splash Mountain",
+    "description": "Log flume ride with a giant drop and water splashes.",
+    "thrillLevel": "Moderate",
+    "image": "https://www.theaureview.com/wp-content/uploads/2024/11/102424CT2MB-0212B-2149x1395-c29f0d1-703x456.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Space Spinner",
+    "description": "Intense spinning ride that tests your limits.",
+    "thrillLevel": "Extreme",
+    "image": "https://www.iepark.com/wp-content/uploads/2019/06/26-Spin-space_rev09-18a.jpg"
+  }
+]

@@ -10,18 +10,20 @@ const PORT = process.env.PORT || 3000
 
 const db = require("./config/db")
 
-const themeParkRouter = require("./routes/ThemePark")
-
 //use app
 app.use(logger("dev"))
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
+const themeParkRouter = require("./routes/ThemePark")
+app.use("/themeparks", themeParkRouter)
+const gamesRouter = require("./routes/games")
+app.use("/games", gamesRouter)
+
 app.use("/", (req, res) => {
   res.send(`Connected!`)
 })
-app.use("/themeparks", themeParkRouter)
 
 app.listen(PORT, () => {
   console.log(`Running Express server on Port ${PORT} . . .`)

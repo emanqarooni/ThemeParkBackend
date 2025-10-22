@@ -1,4 +1,3 @@
-const axios = require("axios")
 const ThemePark = require("../models/themePark")
 
 //get all theme parks
@@ -34,14 +33,13 @@ const DeleteThemePark = async (req, res) => {
   }
 }
 
-//get games from external Park Fan API
-const GetGames = async (req, res) => {
+//get theme park by id for the details page
+const GetThemeParkById = async (req, res) => {
   try {
-    const response = await axios.get("https://api.park.fan/games")
-    res.status(200).json(response.data)
+    const park = await ThemePark.findById(req.params.id)
+    res.status(200).send(park)
   } catch (error) {
-    console.error("Error fetching games:", error)
-    res.status(500).send("Error fetching games from Park Fan API")
+    res.status(500).send("Error fetching theme park")
   }
 }
 
@@ -49,5 +47,5 @@ module.exports = {
   GetThemePark,
   CreateThemePark,
   DeleteThemePark,
-  GetGames,
+  GetThemeParkById,
 }
